@@ -3,14 +3,10 @@ dir = ""
 currNum = 50
 turnNum = 0
 sum = 0
-zeroSum = 0
-prevNum = 50
 
 for line in (file.read().split("\n")):
     dir = line[0]
-    turnNum = int(line[1:])
-    sum += turnNum // 100
-    turnNum %= 100
+    turnNum = int(line[1:]) % 100
     
     if(dir == "L"):
         currNum -= turnNum
@@ -19,19 +15,10 @@ for line in (file.read().split("\n")):
     
     if (currNum < 0):
         currNum += 100
-        if prevNum != 0 and currNum != 0: 
-            sum += 1
-            print("CurrNum: ", currNum, "\n")
     elif (currNum > 99):
         currNum -= 100
-        if prevNum != 0 and currNum!= 0: 
-            sum += 1
-            print("CurrNum2: ", currNum, "\n")
-        
+    
     if (currNum == 0):
         sum += 1
-        
-    prevNum = currNum
-    
     
 print(sum)
