@@ -8,5 +8,10 @@
 - var for turn number
 - if first letter is L:
     - current number = current number - turnNumber
-    - if current number is negative, current number = 100-turnNum
-    - if current number is above 99, current number = turnNum - 100
+    - if current number is negative, current number = 100+currentNum
+    - if current number is above 99, current number = currentNum-100
+    - e.g. 95 R10, currNum is 105, so 105-100 =5, and 5 L10, currNum is -5 so 100+-5 = 95
+
+## part 2
+ - everytime number is above 99 or below 0, count that
+ - before modding number, int divide by 100, then add to sum
