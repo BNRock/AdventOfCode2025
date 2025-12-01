@@ -21,12 +21,10 @@ for line in (file.read().split("\n")):
         currNum += 100
         if prevNum != 0 and currNum != 0: 
             sum += 1
-            print("CurrNum: ", currNum, "\n")
     elif (currNum > 99):
         currNum -= 100
         if prevNum != 0 and currNum!= 0: 
             sum += 1
-            print("CurrNum2: ", currNum, "\n")
         
     if (currNum == 0):
         sum += 1
